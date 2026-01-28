@@ -74,16 +74,17 @@
 }
 
 @layer base {
+  /* Hide default cursor - custom cursor component handles this */
   * {
     @apply border-border;
-    cursor: url('https://i.ibb.co/svQ6rPBK/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-cursor-Sweezy-Cursors.png') 0 0, auto;
-    cursor: image-set(url('https://i.ibb.co/svQ6rPBK/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-cursor-Sweezy-Cursors.png') 1x) 0 0, auto;
+    cursor: none !important;
   }
 
-  a, button, [role="button"], input[type="submit"], input[type="button"], 
-  .clickable, [onclick], label, select, .word-span {
-    cursor: url('https://i.ibb.co/mmTwFwC/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-pointer-Sweezy-Cursors.png') 0 0, pointer;
-    cursor: image-set(url('https://i.ibb.co/mmTwFwC/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-pointer-Sweezy-Cursors.png') 1x) 0 0, pointer;
+  /* Keep cursor visible on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    * {
+      cursor: auto !important;
+    }
   }
 
   body {
