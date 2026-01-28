@@ -59,12 +59,12 @@ export function AudioPlayer({
   const restart = () => onSeek(0);
 
   return (
-    <div className="glass-panel rounded-2xl p-6">
+    <div className="glass-panel rounded-2xl p-4 sm:p-6">
       <audio ref={audioRef} src={audioUrl} />
       
       {/* Progress bar */}
       <div 
-        className="h-2 bg-secondary rounded-full overflow-hidden mb-4 group"
+        className="h-2 bg-secondary rounded-full overflow-hidden mb-3 sm:mb-4 group"
         onClick={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           const percent = (e.clientX - rect.left) / rect.width;
@@ -81,31 +81,31 @@ export function AudioPlayer({
       </div>
 
       {/* Time display */}
-      <div className="flex justify-between text-sm text-muted-foreground mb-4">
+      <div className="flex justify-between text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
         <span className="font-mono">{formatTime(currentTime)}</span>
         <span className="font-mono">{formatTime(duration)}</span>
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-center gap-2">
-        <button onClick={restart} className="btn-ghost p-3">
-          <RotateCcw className="w-5 h-5" />
+      <div className="flex items-center justify-center gap-1 sm:gap-2">
+        <button onClick={restart} className="btn-ghost p-2 sm:p-3">
+          <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
-        <button onClick={skipBackward} className="btn-ghost p-3">
-          <Rewind className="w-5 h-5" />
+        <button onClick={skipBackward} className="btn-ghost p-2 sm:p-3">
+          <Rewind className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
         <button 
           onClick={onPlayPause}
-          className="btn-primary w-14 h-14 rounded-full p-0 flex items-center justify-center"
+          className="btn-primary w-11 h-11 sm:w-14 sm:h-14 rounded-full p-0 flex items-center justify-center"
         >
           {isPlaying ? (
-            <Pause className="w-6 h-6" />
+            <Pause className="w-5 h-5 sm:w-6 sm:h-6" />
           ) : (
-            <Play className="w-6 h-6 ml-0.5" />
+            <Play className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" />
           )}
         </button>
-        <button onClick={skipForward} className="btn-ghost p-3">
-          <FastForward className="w-5 h-5" />
+        <button onClick={skipForward} className="btn-ghost p-2 sm:p-3">
+          <FastForward className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
     </div>

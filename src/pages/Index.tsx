@@ -35,13 +35,13 @@ const Index = () => {
   const lrcContent = words.length > 0 ? generateLrc() : '';
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pb-12">
         <Header onReset={resetAll} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 mt-4">
           {/* Left Column - Audio & Lyrics Input */}
-          <div className="lg:col-span-4 space-y-6 animate-fade-up opacity-0 stagger-2">
+          <div className="lg:col-span-4 space-y-4 sm:space-y-6 animate-fade-up opacity-0 stagger-2">
             <AudioUploader 
               onUpload={handleAudioUpload} 
               audioFile={audioFile} 
@@ -73,7 +73,7 @@ const Index = () => {
           </div>
 
           {/* Middle Column - Word Editor */}
-          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-3">
+          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-3 min-h-[300px]">
             <WordEditor
               words={words}
               currentWordIndex={currentWordIndex}
@@ -84,7 +84,7 @@ const Index = () => {
           </div>
 
           {/* Right Column - LRC Preview */}
-          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-4">
+          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-4 min-h-[300px]">
             <LrcPreview
               lrcContent={lrcContent}
               onDownload={downloadLrc}
@@ -94,9 +94,9 @@ const Index = () => {
         </div>
 
         {/* Footer hint */}
-        <div className="mt-8 text-center animate-fade-up opacity-0 stagger-5">
-          <p className="text-sm text-muted-foreground">
-            Play audio → Click a word to select → Press <kbd className="px-1.5 py-0.5 bg-card rounded border border-border font-mono text-xs mx-1">Space</kbd> to sync
+        <div className="mt-6 sm:mt-8 text-center animate-fade-up opacity-0 stagger-5 px-2">
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            Play audio → Click a word to select → Press <kbd className="px-1 sm:px-1.5 py-0.5 bg-card rounded border border-border font-mono text-[10px] sm:text-xs mx-0.5 sm:mx-1">Space</kbd> to sync
           </p>
         </div>
       </div>

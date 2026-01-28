@@ -76,12 +76,14 @@
 @layer base {
   * {
     @apply border-border;
-    cursor: url('https://i.ibb.co/svQ6rPBK/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-cursor-Sweezy-Cursors.png'), auto;
+    cursor: url('https://i.ibb.co/svQ6rPBK/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-cursor-Sweezy-Cursors.png') 0 0, auto;
+    cursor: image-set(url('https://i.ibb.co/svQ6rPBK/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-cursor-Sweezy-Cursors.png') 1x) 0 0, auto;
   }
 
   a, button, [role="button"], input[type="submit"], input[type="button"], 
   .clickable, [onclick], label, select, .word-span {
-    cursor: url('https://i.ibb.co/mmTwFwC/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-pointer-Sweezy-Cursors.png'), pointer;
+    cursor: url('https://i.ibb.co/mmTwFwC/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-pointer-Sweezy-Cursors.png') 0 0, pointer;
+    cursor: image-set(url('https://i.ibb.co/mmTwFwC/Jujutsu-Kaisen-Gojo-Cat-Chibi-Satoru-Gojo-pointer-Sweezy-Cursors.png') 1x) 0 0, pointer;
   }
 
   body {
