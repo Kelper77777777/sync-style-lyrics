@@ -1,3 +1,4 @@
+import { Instagram } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { AudioUploader } from '@/components/AudioUploader';
 import { AudioPlayer } from '@/components/AudioPlayer';
@@ -103,10 +104,18 @@ const Index = () => {
         </div>
 
         {/* Credits */}
-        <div className="mt-8 sm:mt-12 text-center animate-fade-up opacity-0 stagger-5">
+        <div className="mt-8 sm:mt-12 text-center animate-fade-up opacity-0 stagger-5 flex flex-col items-center gap-2">
           <p className="text-xs text-muted-foreground/60">
             Made with ❤️ by Ash
           </p>
+          <a 
+            href="https://www.instagram.com/sayhiiash" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground/60 hover:text-accent transition-colors duration-200"
+          >
+            <Instagram className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </div>
