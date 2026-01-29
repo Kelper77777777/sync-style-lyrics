@@ -84,7 +84,7 @@ export function WordEditor({
   }
 
   return (
-    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col h-full min-h-[300px]">
+    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col min-h-[280px] h-auto">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-0 mb-4">
         <div className="flex items-center gap-2">
@@ -129,7 +129,7 @@ export function WordEditor({
       {/* Words grid with Apple Music style animations */}
       <div 
         ref={containerRef}
-        className="flex-1 overflow-y-auto space-y-2 sm:space-y-3 pr-1 sm:pr-2 max-h-[300px] sm:max-h-[400px] lyrics-container"
+        className="overflow-y-auto space-y-2 sm:space-y-3 pr-1 sm:pr-2 max-h-[200px] sm:max-h-[350px] lyrics-container"
       >
         {lines.map((line) => {
           const isActiveLine = line.lineIndex === currentLineIndex;

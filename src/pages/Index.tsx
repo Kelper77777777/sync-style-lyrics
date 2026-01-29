@@ -40,9 +40,9 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pb-12">
         <Header onReset={resetAll} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 mt-4">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 sm:gap-6 mt-4">
           {/* Left Column - Audio & Lyrics Input */}
-          <div className="lg:col-span-4 space-y-4 sm:space-y-6 animate-fade-up opacity-0 stagger-2">
+          <div className="lg:col-span-4 flex flex-col gap-4 sm:gap-6 animate-fade-up opacity-0 stagger-2">
             <AudioUploader 
               onUpload={handleAudioUpload} 
               audioFile={audioFile} 
@@ -74,7 +74,7 @@ const Index = () => {
           </div>
 
           {/* Middle Column - Word Editor */}
-          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-3 min-h-[300px]">
+          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-3">
             <WordEditor
               words={words}
               currentWordIndex={currentWordIndex}
@@ -86,7 +86,7 @@ const Index = () => {
           </div>
 
           {/* Right Column - LRC Preview */}
-          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-4 min-h-[300px]">
+          <div className="lg:col-span-4 animate-fade-up opacity-0 stagger-4">
             <LrcPreview
               lrcContent={lrcContent}
               onDownload={downloadLrc}

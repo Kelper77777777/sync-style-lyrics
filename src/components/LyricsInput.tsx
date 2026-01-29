@@ -9,7 +9,7 @@ interface LyricsInputProps {
 
 export function LyricsInput({ lyrics, onLyricsChange, onParseLyrics, hasWords }: LyricsInputProps) {
   return (
-    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col h-full">
+    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-0 mb-4">
         <div className="flex items-center gap-2">
           <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
@@ -28,7 +28,7 @@ export function LyricsInput({ lyrics, onLyricsChange, onParseLyrics, hasWords }:
         value={lyrics}
         onChange={(e) => onLyricsChange(e.target.value)}
         placeholder="Paste your lyrics here...&#10;&#10;Each line will be split into words&#10;for word-by-word timestamping."
-        className="textarea-field flex-1 min-h-[150px] sm:min-h-[200px]"
+        className="textarea-field min-h-[120px] sm:min-h-[180px] resize-none"
       />
       
       <p className="text-[10px] sm:text-xs text-muted-foreground mt-2 sm:mt-3">
