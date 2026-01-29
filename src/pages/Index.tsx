@@ -30,6 +30,7 @@ const Index = () => {
     generateLrc,
     downloadLrc,
     resetAll,
+    markCurrentWord,
   } = useLrcGenerator();
 
   const lrcContent = words.length > 0 ? generateLrc() : '';
@@ -79,6 +80,7 @@ const Index = () => {
               currentWordIndex={currentWordIndex}
               onWordClick={jumpToWord}
               onWordClear={clearWordTimestamp}
+              onSync={markCurrentWord}
               isPlaying={isPlaying}
             />
           </div>
