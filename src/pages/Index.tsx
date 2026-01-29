@@ -101,6 +101,13 @@ const Index = () => {
             Play audio → Click a word to select → Press <kbd className="px-1 sm:px-1.5 py-0.5 bg-card rounded border border-border font-mono text-[10px] sm:text-xs mx-0.5 sm:mx-1">Space</kbd> to sync
           </p>
         </div>
+
+        {/* Credits */}
+        <div className="mt-8 sm:mt-12 text-center animate-fade-up opacity-0 stagger-5">
+          <p className="text-xs text-muted-foreground/60">
+            Made with ❤️ by Ash
+          </p>
+        </div>
       </div>
     </div>
   );
