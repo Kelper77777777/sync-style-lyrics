@@ -43,11 +43,13 @@ export function AudioUploader({ onUpload, audioFile }: AudioUploaderProps) {
       
       {audioFile ? (
         <>
-          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-word-synced/10 flex items-center justify-center">
+          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-word-synced/10 flex items-center justify-center shrink-0">
             <Music className="w-5 h-5 sm:w-7 sm:h-7 text-word-synced" />
           </div>
-          <div className="text-center">
-            <p className="font-medium text-foreground text-sm sm:text-base truncate max-w-[200px] sm:max-w-none">{audioFile.name}</p>
+          <div className="text-center w-full max-w-full px-2 overflow-hidden">
+            <p className="font-medium text-foreground text-sm sm:text-base truncate" title={audioFile.name}>
+              {audioFile.name}
+            </p>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">Click to change file</p>
           </div>
         </>
