@@ -17,7 +17,7 @@ export function LrcPreview({ lrcContent, onDownload, hasContent }: LrcPreviewPro
   };
 
   return (
-    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col h-full min-h-[300px]">
+    <div className="glass-panel rounded-2xl p-4 sm:p-6 flex flex-col">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-0 mb-4">
         <div className="flex items-center gap-2">
           <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
@@ -44,7 +44,7 @@ export function LrcPreview({ lrcContent, onDownload, hasContent }: LrcPreviewPro
         )}
       </div>
 
-      <div className="flex-1 bg-card rounded-xl border border-border overflow-hidden max-h-[300px] sm:max-h-[400px]">
+      <div className="bg-card rounded-xl border border-border overflow-hidden h-[150px] sm:h-[300px]">
         <pre className="p-3 sm:p-4 text-xs sm:text-sm font-mono overflow-auto h-full whitespace-pre-wrap break-all">
           {lrcContent || (
             <span className="text-muted-foreground italic">
